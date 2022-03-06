@@ -1,0 +1,20 @@
+{
+  "name": "games_javascript",
+  "version": "1.0.0",
+  "description": "Learning Javascript with games. Full Course with FreeCodeCamp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Christiano0407/games_Javascript.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Christiano0407/games_Javascript/issues"
+  },
+  "homepage": "https://github.com/Christiano0407/games_Javascript#readme"
+}
