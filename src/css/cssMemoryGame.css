@@ -69,3 +69,26 @@ button {
 i {
   font-size: var(--font-size-md);
 }
+
+.main {
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  display: grid;
+}
+.game__Two {
+  width: 500px;
+  height: 500px;
+  outline: 4px solid #000;
+  align-self: center;
+  justify-self: center;
+  display: grid;
+}
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  width: 400px;
+  height: 300px;
+  outline: 2px solid red;
+  justify-self: center;
+}
