@@ -84,6 +84,12 @@ i {
   justify-self: center;
   display: grid;
 }
+h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 1rem;
+  margin-left: 2rem;
+}
 .grid {
   display: flex;
   flex-wrap: wrap;
