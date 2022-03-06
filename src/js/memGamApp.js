@@ -37,5 +37,7 @@ const cardArray = [
     img: "../src/assets/memory02/white.png",
   },
 ];
-console.log(cardArray);
 //> Events ==>
+//> sort ordenado >
+cardArray.sort(() => 0.5 - Math.random());
+console.log(cardArray);
