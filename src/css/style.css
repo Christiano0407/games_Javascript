@@ -41,12 +41,8 @@ html {
 }
 
 body {
-  font-family: var(--font-family);
-  font-size: var(--font-size-sm);
-  color: var(--light-color-alt);
-  background-color: var(--primary-background-color);
-  letter-spacing: 1px;
-  transition: background-color 0.25s, color 0.25s;
+  width: 100%;
+  background: #fff;
 }
 
 a {
@@ -62,14 +58,36 @@ img {
   max-width: 100%;
 }
 
-input,
+/* input,
 button {
   font: inherit;
   color: inherit;
   border: none;
   background-color: transparent;
-}
+} */
 
 i {
   font-size: var(--font-size-md);
+}
+.main {
+  width: 500px;
+  height: 500px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+.game {
+  outline: 4px solid #252830;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  height: 250px;
+}
+.btn {
+  padding: 1rem;
+  cursor: pointer;
+}
+.btn:active {
+  transform: scale(0.9);
+  border: 4px solid red;
 }
