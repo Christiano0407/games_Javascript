@@ -81,7 +81,7 @@ createBoard = () => {
     card.setAttribute("src", "../assets/memory02/blank.png"); //> SET = Agregar O Colocar.>
     card.setAttribute("data-id", i);
     card.addEventListener("click", flipCard); //Llamar a la function>
-    gridDisplay.appendChild(card);
+    gridDisplay.appendChild(card); // Agregamos como elemento hijo => IMG en Grid>
   }
 };
 
