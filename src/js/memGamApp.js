@@ -52,6 +52,14 @@ const cardArray = [
     name: "ice-cream",
     img: "../assets/memory02/ice-cream.png",
   },
+  {
+    name: "cheeseburger",
+    img: "../assets/memory02/cheeseburger.png",
+  },
+  {
+    name: "milkshake",
+    img: "../assets/memory02/milkshake.png",
+  },
 ];
 //> Events ==>
 //> sort ordenado >
@@ -59,10 +67,13 @@ cardArray.sort(() => 0.5 - Math.random());
 /* console.log(cardArray); */
 
 //> Crear e llamar a las img.
+const resultDisplay = document.getElementById("result");
+console.log(resultDisplay);
 const gridDisplay = document.getElementById("grid");
 console.log(gridDisplay);
-
-const cardChosen = []; //> Guardar todo en un array>
+let cardChosen = []; //> Guardar todo en un array>
+let cardsChosenIds = []; //> ID
+const cardsWon = []; // Card Win!>
 
 createBoard = () => {
   for (let i = 0; i < cardArray.length; i++) {
@@ -76,13 +87,57 @@ createBoard = () => {
 
 createBoard();
 
+//=> Check Math Function0> conection >
+function checkMatch() {
+  const cards = document.querySelectorAll("img");
+  //>Options
+  let optionOneId = cardsChosenIds[0];
+  let optionTwoId = cardsChosenIds[1];
+  //>> Compare Options>
+  if (optionOneId == optionTwoId) {
+    cards[optionOneId].setAttribute("src", "../assets/memory02/blank.png");
+    cards[optionOneId].setAttribute("src", "../assets/memory02/blank.png");
+    console.log("Yo have clicked the same Image");
+  }
+
+  //>> Options>>
+  if (cardChosen[0] == cardChosen[1]) {
+    console.log("You found a match!");
+    cards[optionOneId].setAttribute("src", "../assets/memory02/white.png");
+    cards[optionTwoId].setAttribute("src", "../assets/memory02/white.png");
+    cards[optionOneId].removeEventListener("click", flipCard);
+    cards[optionTwoId].removeEventListener("click", flipCard);
+    cardsWon.push(cardChosen); //>Agregar
+  } else {
+    cards[optionOneId].setAttribute("src", "../assets/memory02/blank.png"); //> Regreso en caso de no ser iguales=>
+    cards[optionTwoId].setAttribute("src", "../assets/memory02/blank.png");
+    console.log("Sorry! Try Again.");
+  }
+  //>
+  resultDisplay.textContent = cardsWon.length;
+  cardChosen = [];
+  cardsChosenIds = [];
+
+  //> Cards Para ganar son 2 ==>
+  if (cardsWon.length == cardArray.length / 2) {
+    resultDisplay.innerHTML = "Congratulations!";
+  }
+}
+
 // Flip =>  LLamar / MEMORY O Intersection ==> === >
 function flipCard() {
-  console.log(cardArray); //> LLamar a mi lista>
+  // console.log(cardArray); //> LLamar a mi lista>
   const cardId = this.getAttribute("data-id"); //> Agregamos el atributo de ID = num> GET => OBTENER.
   //console.log(cardArray[cardId].name); //Aparece el nombre>
   cardChosen.push(cardArray[cardId].name);
-  console.log("clicked", cardId); //> Aparece el Id
-  console.log(cardChosen); //> Llamar lo que está en la lista (agregando al dar click) ==>
+  cardsChosenIds.push(cardId); // Saber el "id", de las tarjetas>
+  console.log(cardsChosenIds);
+  console.log(cardChosen);
+  //console.log("clicked", cardId); //> Aparece el Id
+  //console.log(cardChosen); //> Llamar lo que está en la lista (agregando al dar click) ==>
   this.setAttribute("src", cardArray[cardId].img); //Agregar IMG y Conectar con ID ==>
+
+  if (cardChosen.length === 2) {
+    setTimeout(checkMatch, 500);
+  }
 }
