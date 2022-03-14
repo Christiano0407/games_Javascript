@@ -7,11 +7,14 @@ block.classList.add("block"); */
 //> Conect with User =>
 const blockWidth = 100;
 const blockHeight = 20;
+//User4)>
+const userStart = [230, 10]; // left / bottom
+let currentPosition = userStart;
 
 // Events === ==== ===>
 /*  grid.appendChild(block);  */ //> Agregamos dentro de "Grid" => Block <<
 
-//2)>
+//2)================================================================>
 // Create Block> Constructor  o Contenedor ===>>
 class Block {
   constructor(xAxis, yAxis) {
@@ -22,9 +25,9 @@ class Block {
   }
 }
 
-//> 3) ===== All My Block ===Parameter=>
+//> 3) ===== All My Block ===Parameter============================>
 const blocks = [
-  new Block(10, 270),
+  new Block(10, 270), // left / bottom>
   new Block(120, 270),
   new Block(230, 270),
   new Block(340, 270),
@@ -41,7 +44,7 @@ const blocks = [
   new Block(450, 210),
 ];
 
-//1)> Moves = Draw my Block == === ===>>
+//1)> Moves = Draw my Block == === ===>====================================>
 function addBlocks() {
   for (let i = 0; i < blocks.length; i++) {
     const block = document.createElement("div"); //> Creamos un "Div"
@@ -57,12 +60,27 @@ function addBlocks() {
 addBlocks();
 // 1) ==>
 
-// 4) ==User == == == >
+// 4) ==User == == ===================================== >
 const user = document.createElement("div");
 user.classList.add("user");
+drawUser();
 grid.appendChild(user);
+//> Draw User ==>
+function drawUser() {
+  user.style.left = currentPosition[0] + "px";
+  user.style.bottom = currentPosition[1] + "px";
+}
 
-//> Ball ==>
+//> Move User === =>>
+function moveUser(e) {
+  switch (e.key) {
+    case "ArrowLeft":
+      currentPosition[0] -= 10;
+      user.style.left = currentPosition[0] + "px";
+  }
+}
+
+//> 5)  Ball ==>
 const ball = document.createElement("div");
 ball.classList.add("ball");
 grid.appendChild(ball);
