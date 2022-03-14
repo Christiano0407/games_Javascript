@@ -46,6 +46,7 @@ function addBlocks() {
   for (let i = 0; i < blocks.length; i++) {
     const block = document.createElement("div"); //> Creamos un "Div"
     block.classList.add("block"); // Agregamos el Div ==>
+
     block.style.left = blocks[i].bottomLeft[0] + "px";
     block.style.bottom = blocks[i].bottomLeft[1] + "px";
     /*  grid.style.right = "100px"; */
@@ -55,3 +56,13 @@ function addBlocks() {
 }
 addBlocks();
 // 1) ==>
+
+// 4) ==User == == == >
+const user = document.createElement("div");
+user.classList.add("user");
+grid.appendChild(user);
+
+//> Ball ==>
+const ball = document.createElement("div");
+ball.classList.add("ball");
+grid.appendChild(ball);
