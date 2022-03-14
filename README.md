@@ -54,6 +54,26 @@ As always, if you get stuck or have any questions, please do comment below and I
 
 I would love to see what you made so please tag me on twitter on @ania_kubow or mention me on Youtube so I can find it and see.
 
+## 2D Breakpoints
+
+A game of 2D Breakout in HTML, CSS and JavaScript
+
+Hello everyone, in this video I show you how to build a game of 2D Breakout in HTML, CSS and JavaScript.
+
+You can watch the whole video here
+
+We also deploy it to a .com website so you can share it with your friends. Hostinger have kindly given a 10% discount to sign up to anyone who watches this video. Just use the code ANIAKUBOW right here: https://www.hostinger.com/aniakubow
+
+If you liked this course, and would like to buy me a coffee Sign up for weekly coding tips from my newsletter partnership:
+
+Are there any course requirements or prerequisites?
+This is a course for people who have never coded and would like to learn
+Who this course is for:
+For beginners with an understanding of the fundamentals of JavaScript.
+If you are looking to learn the fundamentals of HTML,CSS and JavaScript, watch my 12hr Coding Bootcamp here.
+
+When you have finished your project I would love for you to share it with me - you can find me on YouTube or Twitter.
+
 ## MIT License
 
 > MIT License
