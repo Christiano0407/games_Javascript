@@ -64,17 +64,31 @@ img {
 }
 
 /*Game*/
+h2 {
+  margin-top: 20px;
+  margin-left: 10px;
+}
+#score {
+  margin-left: 30px;
+  margin-top: 10px;
+}
+#time-left {
+  margin-left: 30px;
+  margin-top: 10px;
+}
 .grid {
   width: 606px;
   height: 606px;
   display: flex;
   flex-wrap: wrap;
+  margin-left: 30px;
+  margin-top: 20px;
 }
 
 .square {
   height: 200px;
   width: 200px;
-  border: solid black 1px;
+  border: solid black 4px;
 }
 
 .mole {
