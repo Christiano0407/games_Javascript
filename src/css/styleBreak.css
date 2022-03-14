@@ -64,12 +64,17 @@ img {
 }
 
 /*Game 2D*/
+.score {
+  margin-top: 20px;
+  margin-left: 20px;
+}
 .grid {
   position: absolute;
   width: 560px;
   height: 300px;
-  border: solid 1px black;
-  margin-top: 100px;
+  border: solid 4px black;
+  margin-top: 10px;
+  margin-left: 10px;
 }
 /*JS*/
 .user {
@@ -84,6 +89,8 @@ img {
   width: 100px;
   height: 20px;
   background-color: blue;
+  /* border-radius: 10px; */
+  border: none;
 }
 
 .ball {
