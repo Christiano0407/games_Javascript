@@ -9,13 +9,22 @@
   </head>
   <body>
     <!--SVG Animation-->
-    <svg viewbox="0 0 100 100">
-      <rect x="30" y="0" width="70" height="50" fill="blue" />
-      <rect x="60" y="60" width="40" height="40" fill="green" />
+    <svg class="hero__image anim-hero" xmlns="" viewbox="0 0 100 100">
+      <clipPath id="blueClip">
+        <rect  class="hero__swipe-1" id="heroclip1Rect"  x="30" y="0" width="70" height="50" fill="blue" 
+        transform="matrix(1,0,0,1,0,0)" style="transform-origin: 0px 0px;">/>
+      </clipPath>
+        <clipPath id="heroclip2">
+      <rect class="hero__swipe-2" id="heroclip1Rect" x="60" y="60" width="40" height="40" fill="green" 
+      svg-origin="487.75999450683594 428.24000549316406" transform="matrix(1,0,0,1,0,0)" style="transform-origin: 0px 0px;">/>
+      </clipPath>
       <rect x="0" y="30" width="50" height="70" fill="pink" />
 
       <image
+        id="image-one"
         preserveAspectRatio="xMidYMid slice"
+        clip-path="url(#blueClip)"
+        data-svg-origin="590.1000061035156 162.17499923706055" 
         x="30"
         y="0"
         width="70"
@@ -24,6 +33,7 @@
       />
       <image
         preserveAspectRatio="xMidYMid slice"
+         clip-path="url(#blueClip)"
         x="60"
         y="60"
         width="40"
